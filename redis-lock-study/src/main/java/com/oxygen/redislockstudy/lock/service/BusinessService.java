@@ -1,7 +1,7 @@
-package com.oxygen.redislockstudy.redislock2.service;
+package com.oxygen.redislockstudy.lock.service;
 
 
-import com.oxygen.redislockstudy.redislock2.utils.RedisLockUtil;
+import com.oxygen.redislockstudy.lock.utils.RedisLockUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

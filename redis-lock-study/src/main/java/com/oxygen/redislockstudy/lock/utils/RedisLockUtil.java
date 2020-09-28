@@ -1,4 +1,4 @@
-package com.oxygen.redislockstudy.redislock2.utils;
+package com.oxygen.redislockstudy.lock.utils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -24,8 +24,8 @@ import java.lang.reflect.Method;
  * @date 2020/5/21 11:07
  **/
 
-@Aspect
-@Configuration
+//@Aspect
+//@Configuration
 public class LockMethodInterceptor {
 
     private static final Long LOCK_SUCCESS = 1L;
