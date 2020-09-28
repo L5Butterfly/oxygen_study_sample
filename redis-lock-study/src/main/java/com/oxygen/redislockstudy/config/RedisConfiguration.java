@@ -22,14 +22,8 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
   * @date 2020/9/28 14:33
   * @created by oxygen
   */
-@Configuration
+//@Configuration
 public class RedisConfiguration {
-
-//	@Bean(name = "redisConnectionFactory0")
-//	public JedisConnectionFactory redisConnectionFactory0(JedisConnectionFactory jedisConnectionFactory) {
-//		jedisConnectionFactory.setDatabase(0);
-//		return jedisConnectionFactory;
-//	}
 
 	 @Bean
 	 public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory0) {

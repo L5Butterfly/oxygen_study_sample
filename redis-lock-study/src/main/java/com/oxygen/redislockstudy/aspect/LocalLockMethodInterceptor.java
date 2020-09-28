@@ -15,8 +15,9 @@ import org.springframework.util.StringUtils;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
-//@Aspect
-//@Component
+
+@Aspect
+@Component
 @Slf4j
 public class LocalLockMethodInterceptor {
 

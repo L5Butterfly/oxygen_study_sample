@@ -39,19 +39,15 @@ public class ActivityRedisMessageListener extends KeyExpirationEventMessageListe
     public void onMessage(Message message, byte[] pattern) {
 
         log.info("******************redis listener*************");
-        log.info("******************context={}", JSON.toJSON(message));
+        log.info("******************message={}", message.toString());
         String key = new String(message.getBody(), StandardCharsets.UTF_8);
-
         if (key.contains("lock") || NEED_LISTEN_KEYS.stream().noneMatch(key::startsWith)) {
             return;
         }
-
         if (key.startsWith("token:user1")) {
-            // 车辆出行订单 支付超时取消订单
             SpringUtil.getBean(CancelOrderMessageHandler.class).handle(message, pattern);
         }
         if (key.startsWith("token:user2")) {
-            // 车辆出行订单 支付超时取消订单
             SpringUtil.getBean(CancelOrderMessageHandler.class).handle(message, pattern);
         }
     }
